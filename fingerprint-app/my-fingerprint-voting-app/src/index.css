@@ -1,0 +1,24 @@
+
+*{
+  margin:0;
+  padding: 0;
+}
+.card--logo{
+  width: 200px;
+  align-self: center;
+}
+.card--image{
+  width: 75%;
+}
+.nav--logo{
+  width: 240px;
+  margin: 15px 20px;
+}
+.nav-container{
+  background-color: rgb(1, 64, 182);
+  height: 120px;
+}
+.reload-container{
+  margin: 10px;
+}
+
