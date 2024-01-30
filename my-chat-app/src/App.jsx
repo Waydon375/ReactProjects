@@ -1,10 +1,10 @@
-
+import Register from "./pages/Register"
 
 function App() {
 
   return (
     <div>
-    hello world
+    <Register/>
     </div>
   )
 }
