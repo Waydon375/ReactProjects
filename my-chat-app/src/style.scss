@@ -14,7 +14,7 @@
     justify-content: center;
 }
 .formWrapper{
-    background-color: rgb(194, 194, 194);
+    background-color: rgb(201, 201, 201);
     padding: 40px 70px;
     border-radius: 13px;
     display: flex;
@@ -84,5 +84,121 @@
         gap: 10px;
         color: #3d3d3d9f;
         font-size: 12px;
+        img{
+            width: 32px;
+        }
     }
 }
+
+.home{
+    background-color: #3d3d3d;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    border:1px solid white ;
+    border-radius: 10px;
+    height: 75%;
+    width: 80%;
+    display: flex;
+    overflow: hidden;
+}
+.sidebar{
+    flex: 1;
+    background-color: #5b8d8d;
+
+    .navbar{
+        display: flex;
+        align-items:center ;
+        background-color: #07ad97b4;
+        height: 60px;
+        padding: 10px;
+        justify-content: space-between;
+        color: #ddddf7;
+
+        .logo{
+            font-weight:bold;
+        }
+        .user{
+            display: flex;
+            gap:10px;
+        }
+        img{
+            background-color: #ddddf7;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        button{
+            --button_radius: 0.75em;
+            --button_color: transparent;
+            --color:rgb(0, 0, 0);
+            --button_outline_color: #ffffff;
+            font-size: 17px;
+            font-weight: bold;
+            border: none;
+            border-radius: var(--button_radius);
+            background: var(--button_outline_color);
+        }
+        .btn-logout{
+            display: block;
+            box-sizing: border-box;
+            border: 2px solid var(--button_outline_color);
+            border-radius: var(--button_radius);
+            padding: 1px 5px;
+            background: var(--button_color);
+            color: var(--color);
+            transform: translateY(-0.2em);
+            transition: transform 0.1s ease;
+        }
+        button:hover {
+            transform:translateY(-0.33em);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+
+    }
+    .search{
+        border-bottom: 1px solid rgb(230, 227, 227);
+
+        .searchForm{
+            padding: 10px;
+            input{
+                background-color: transparent;
+                border: none;
+                color: white;
+                outline: none;
+
+                &::placeholder{
+                    color: lightgray;
+                }
+            }
+        }
+          .userChat{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            color: #ffffff;
+            transition: all .3s ease-in-out;
+
+            &:hover{
+                background-color:rgba(0, 255, 242, 0.322) ;
+            }
+            img{
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+                
+            }
+        }
+    
+    }
+}
+.chat{flex: 2;}
