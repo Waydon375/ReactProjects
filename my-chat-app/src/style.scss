@@ -91,7 +91,7 @@
 }
 
 .home{
-    background-color: #3d3d3d;
+    background-color: rgb(161, 222, 230);
     height: 100vh;
     display: flex;
     align-items: center;
@@ -101,18 +101,18 @@
     border:1px solid white ;
     border-radius: 10px;
     height: 75%;
-    width: 80%;
+    width: 70%;
     display: flex;
     overflow: hidden;
 }
 .sidebar{
     flex: 1;
-    background-color: #5b8d8d;
+    background-color: #3b4a8d;
 
     .navbar{
         display: flex;
         align-items:center ;
-        background-color: #07ad97b4;
+        background-color: #3958adb4;
         height: 60px;
         padding: 10px;
         justify-content: space-between;
@@ -178,27 +178,140 @@
                 }
             }
         }
-          .userChat{
-            padding: 10px;
+          
+    }
+    .userChat{
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        cursor: pointer;
+        color: #ffffff;
+        transition: all .3s ease-in-out;
+
+        &:hover{
+            background-color:rgba(123, 79, 245, 0.897) ;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            
+        }
+        .userChatInfo{
+            span{
+                font-size: 18px;
+                font-weight: 500;
+            }
+            p{
+                font-size: 14px;
+                color: lightgrey;
+            }
+        }
+    }
+}
+.chat{
+    flex: 2;
+   
+    .chatInfo{
+        display: flex;
+        align-items: center;
+        height: 50px;
+        background-color: #3957bb;
+        justify-content: space-between;
+        padding: 10px;
+        color: lightgray;
+    }
+    .chatIcons{
+        display: flex;
+        gap: 10px;
+       
+        img{
+            height: 28px;
+            cursor: pointer;
+        }
+    }
+    .messages{
+        background-color:#ddddf7 ;
+        padding: 10px;
+        height:calc(363px);
+    }
+    .input{
+        height: 50px;
+        background-color: #272020;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        input{
+           width: 100%; 
+           border: none;
+           outline: none;
+           color: #1a1a1a;
+           font-size: 14px;
+
+           &::placeholder{
+            color: rgb(255, 249, 249);
+            background-color: #3b3131;
+           }
+        }
+        .send{
             display: flex;
             align-items: center;
             gap: 10px;
-            cursor: pointer;
-            color: #ffffff;
-            transition: all .3s ease-in-out;
 
-            &:hover{
-                background-color:rgba(0, 255, 242, 0.322) ;
-            }
             img{
-                width: 50px;
-                height: 50px;
-                border-radius: 50%;
-                object-fit: cover;
-                
+                height: 24px;
+                cursor: pointer;
+            }
+            button{
+                --glow-color:rgb(210, 176, 255);
+                --glow-spread-color: rgba(191, 123, 255 ,0.781);
+                --enhanced-glow-color:rgb(231, 206, 255);
+                --btn-color: rgb(109, 33, 180);
+                border: .25em solid var(--glow-color);
+                padding: .2em .6em;
+                color: var(--glow-color);
+                font-size: 15px;
+                font-weight: bold;
+                background-color: var(--btn-color);
+                border-radius: 1em;
+                outline: none;
+                box-shadow: 0 0 1em .25em var(--glow-color),
+                            0 0 4em 1em var(--glow-spread-color),
+                            inset 0 0 .75em .25em var(--glow-color);
+                text-shadow: 0 0 .5em var(--glow-color);
+                position: relative;
+                transition: all 0.3s;
+            }
+            button::after{
+                pointer-events: none;
+                content: "";
+                position:absolute;
+                top: 120%;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                background-color: var(--glow-spread-color);
+                filter: blur(2em);
+                opacity: .7;
+                transform: perspective(1.5em) rotateX(35deg)
+                scale(1, .6);
+            }
+            button:hover{
+                color: var(--btn-color);
+                background-color: var(--glow-color);
+                box-shadow: 0 0 1em .25em var(--glow-color),
+                0 0 4em 2em var(--glow-spread-color),
+                inset 0 0 .75em .25em var(--glow-color);
+            }
+            button:active{
+                box-shadow: 0 0 0.6em .25em var(--glow-color),
+                            0 0 2.5em 2em var(--glow-spread-color),
+                            inset 0 0 .5em .25em var(--glow-color);
             }
         }
-    
     }
 }
-.chat{flex: 2;}
