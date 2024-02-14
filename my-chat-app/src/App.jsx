@@ -1,9 +1,11 @@
-import './App.css'
+import './styles.scss'
+import { Register } from './pages/Register'
 
 function App() {
+
   return (
     <>
-
+     <Register/>
     </>
   )
 }
