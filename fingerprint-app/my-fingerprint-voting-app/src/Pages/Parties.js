@@ -83,7 +83,7 @@ const Parties = () =>{
     
     <div className="reload-container">
       <Button loading={loading} onClick={handleLoadingClick} primary>
-          Simulate loading
+          Reload cards
         </Button>
         <Divider />
     </div>
